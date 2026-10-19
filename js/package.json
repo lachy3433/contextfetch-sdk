@@ -1,0 +1,47 @@
+{
+  "name": "@contextfetch/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript client for the ContextFetch API: web search and web pages as Markdown for AI agents. Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "node --test test/client.test.mjs test/live.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.130",
+    "typescript": "7.0.2"
+  },
+  "keywords": [
+    "contextfetch",
+    "search",
+    "web-search",
+    "markdown",
+    "ai-agents",
+    "llm",
+    "rag"
+  ],
+  "homepage": "https://contextfetch.dev/docs/reference",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "contextfetch"
+version = "0.1.0"
+description = "Python client for the ContextFetch API: web search and web pages as Markdown for AI agents."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = []
+keywords = ["search", "web-search", "markdown", "ai-agents", "llm", "rag", "contextfetch"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://contextfetch.dev"
+Documentation = "https://contextfetch.dev/docs/reference"
+
+[tool.hatch.build.targets.sdist]
+include = ["contextfetch", "tests", "README.md", "LICENSE"]
